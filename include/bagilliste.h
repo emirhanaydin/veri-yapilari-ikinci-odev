@@ -6,10 +6,17 @@
 
 class BagilListe {
 private:
-    Dugum *_dugum;
+    int boyut;
+    Dugum *_ilk; // Mevcut düğümü belirtir.
+    Dugum *_son; // Son düğümü belirtir.
     Gezici *_gezici;
 public:
     BagilListe();
+
+    void ekle(Sayi);
+
+    Sayi getir(int) const;
+
     ~BagilListe();
 };
 

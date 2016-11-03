@@ -9,9 +9,9 @@ private:
 public:
     Gezici(Dugum *dugum);
 
-    const Sayi &alSayi() const;
+    Dugum *dugum() const;
 
-    void ileri();
+    Dugum *ilerle();
 };
 
 #endif

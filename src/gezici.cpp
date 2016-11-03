@@ -4,10 +4,12 @@ Gezici::Gezici(Dugum *dugum) {
     _dugum = dugum;
 }
 
-const Sayi& Gezici::alSayi() const {
-    return *_dugum->sayi();
+Dugum *Gezici::dugum() const {
+    return _dugum;
 }
 
-void Gezici::ileri() {
+Dugum *Gezici::ilerle() {
     _dugum = _dugum->sonraki();
+
+    return _dugum;
 }

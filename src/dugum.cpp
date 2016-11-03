@@ -1,14 +1,29 @@
 #include "dugum.h"
 
 Dugum::Dugum() {
-    _sayi = 0;
-    _sonraki = 0;
+    _sayi = new Sayi();
+    _sonraki = NULL;
 }
 
-Sayi *Dugum::sayi() {
+Dugum::Dugum(Sayi *sayi, Dugum *sonraki) {
+    _sayi = sayi;
+    _sonraki = sonraki;
+}
+
+std::ostream &operator<<(std::ostream &os, const Dugum &dugum) {
+    os << *dugum._sayi;
+
+    return os;
+}
+
+Sayi *Dugum::sayi() const {
     return _sayi;
 }
 
-Dugum *Dugum::sonraki() {
+Dugum *Dugum::sonraki() const {
     return _sonraki;
+}
+
+Dugum::~Dugum() {
+    delete _sayi;
 }
