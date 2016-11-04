@@ -13,10 +13,10 @@ make_dirs:
 	IF NOT EXIST $(LIB) (MD "$(LIB)")
 	IF NOT EXIST $(SRC) (MD "$(SRC)")
 
-gen_libs: test.o sayi.o dugum.o gezici.o
+gen_libs: test.o dugum.o gezici.o
 
 compile:
-	$(CC) $(LIB)/test.o $(LIB)/sayi.o $(LIB)/dugum.o $(LIB)/gezici.o -o $(BIN)/$(EXE)
+	$(CC) $(LIB)/test.o $(LIB)/dugum.o $(LIB)/gezici.o -o $(BIN)/$(EXE).exe
 	
 run: 
 	$(BIN)/$(EXE).exe
@@ -36,7 +36,10 @@ dugum.o:
 gezici.o:
 	$(CC) -I $(INCL) -c $(SRC)/gezici.cpp -o $(LIB)/gezici.o
 
+bagilliste.o:
+	$(CC) -I $(INCL) -c $(SRC)/bagilliste.cpp -o $(LIB)/bagilliste.o
+
 	
-clean:
+clear:
 	DEL "$(BIN)\$(EXE).exe"
 	DEL "$(LIB)\*.o"

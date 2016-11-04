@@ -1,19 +1,29 @@
 #include <iostream>
-#include "sayi.h"
 #include "dugum.h"
 #include "gezici.h"
 
 using namespace std;
 
 int main() {
-    Dugum *dugum = new Dugum(10);
-    Dugum *dugum1 = new Dugum(25, dugum);
-    Dugum *dugum2 = new Dugum(35, dugum1);
+    Dugum *dugum = new Dugum('1');
+    Dugum *dugum1 = new Dugum('5');
+    Dugum *dugum2 = new Dugum('9');
 
-    Gezici *gezici = new Gezici(dugum2);
-    cout << *gezici->dugum() << endl;
-    cout << *gezici->ilerle() << endl;
-    cout << *gezici->ilerle() << endl;
+    *dugum >> dugum1;
+    *dugum1 >> dugum2;
+
+    cout << dugum->rakam() << endl;
+    cout << dugum1->rakam() << endl;
+    cout << dugum2->rakam();
+
+    *dugum = '7';
+
+    cout << endl << dugum->rakam() << endl;
+
+    Gezici *gezici = new Gezici(dugum);
+    cout << gezici->dugum()->rakam() << endl;
+    cout << (*gezici)++->dugum()->rakam() << endl;
+    cout << (*gezici)++->dugum()->rakam() << endl;
 
     delete dugum, dugum1, dugum2, gezici;
     return 0;

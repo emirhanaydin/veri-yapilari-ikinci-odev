@@ -1,23 +1,37 @@
 #include "dugum.h"
 
 Dugum::Dugum() {
-    _sayi = new Sayi();
+    _rakam = NULL;
     _sonraki = NULL;
 }
 
-Dugum::Dugum(Sayi *sayi, Dugum *sonraki) {
-    _sayi = sayi;
+Dugum::Dugum(char rakam, Dugum *sonraki) {
+//    if(!rakamiDenetle(rakam)) throw new exception();
+    _rakam = new char(rakam);
     _sonraki = sonraki;
 }
 
-std::ostream &operator<<(std::ostream &os, const Dugum &dugum) {
-    os << *dugum._sayi;
+Dugum &Dugum::operator=(char rakam) {
+//    if(!rakamiDenetle(rakam)) throw new exception();
+    if (_rakam == NULL) _rakam = new char(rakam);
+    else *_rakam = rakam;
 
-    return os;
+    return *this;
 }
 
-Sayi *Dugum::sayi() const {
-    return _sayi;
+Dugum *Dugum::operator>>(Dugum *dugum) {
+    _sonraki = dugum;
+
+    return this;
+}
+
+bool Dugum::rakamiDenetle(char &rakam) const {
+    char sayisalDeger = rakam - '0';
+    return sayisalDeger >= 0 && sayisalDeger <= 9;
+}
+
+char Dugum::rakam() const {
+    return *_rakam;
 }
 
 Dugum *Dugum::sonraki() const {
@@ -25,5 +39,5 @@ Dugum *Dugum::sonraki() const {
 }
 
 Dugum::~Dugum() {
-    delete _sayi;
+    delete _rakam;
 }

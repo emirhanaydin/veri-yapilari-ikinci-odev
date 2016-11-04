@@ -3,20 +3,33 @@
 
 #include <cstddef>
 #include <ostream>
-#include "sayi.h"
 
 class Dugum {
 private:
-    Sayi *_sayi;
+    char *_rakam;
     Dugum *_sonraki;
 public:
     Dugum();
 
-    Dugum(Sayi *sayi, Dugum *sonraki = NULL);
+    Dugum(char, Dugum * = NULL);
 
-    friend std::ostream &operator<<(std::ostream &, const Dugum &);
+    Dugum &operator=(char);
 
-    Sayi *sayi() const;
+    /**
+     * Stream extraction operator (akış çıkarma operatörü) mevcut düğümün sonraki
+     * göstericisine belirtilen düğümü atamak için aşırı yüklenmiştir.
+     * @param dugum Sonraki göstericisine atanacak olan düğümün adresi.
+     * @return Mevcut düğümün adresini döndürür.
+     */
+    Dugum *operator>>(Dugum *dugum);
+
+    /**
+     * Gönderilen karakterin sayısal değerinin bir rakam olup olmadığını denetler.
+     * @return Rakam ise true, değil ise false döndürür.
+     */
+    bool rakamiDenetle(char &) const;
+
+    char rakam() const;
 
     Dugum *sonraki() const;
 

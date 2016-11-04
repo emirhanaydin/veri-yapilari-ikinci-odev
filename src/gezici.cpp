@@ -4,12 +4,12 @@ Gezici::Gezici(Dugum *dugum) {
     _dugum = dugum;
 }
 
-Dugum *Gezici::dugum() const {
-    return _dugum;
-}
-
-Dugum *Gezici::ilerle() {
+Gezici *Gezici::operator++(int) {
     _dugum = _dugum->sonraki();
 
+    return this;
+}
+
+Dugum *Gezici::dugum() const {
     return _dugum;
 }

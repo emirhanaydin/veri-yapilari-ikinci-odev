@@ -9,9 +9,9 @@ private:
 public:
     Gezici(Dugum *dugum);
 
-    Dugum *dugum() const;
+    Gezici *operator++(int);
 
-    Dugum *ilerle();
+    Dugum *dugum() const;
 };
 
 #endif

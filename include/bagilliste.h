@@ -1,6 +1,7 @@
 #ifndef BAGILLISTE_H
 #define BAGILLISTE_H
 
+#include "sayi.h"
 #include "dugum.h"
 #include "gezici.h"
 
@@ -13,7 +14,7 @@ private:
 public:
     BagilListe();
 
-    void ekle(Sayi);
+    void ekle(Sayi *);
 
     Sayi getir(int) const;
 
