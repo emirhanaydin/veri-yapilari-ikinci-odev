@@ -6,13 +6,13 @@ Dugum::Dugum() {
 }
 
 Dugum::Dugum(char rakam, Dugum *sonraki) {
-//    if(!rakamiDenetle(rakam)) throw new exception();
+//    if (!rakamiDenetle(rakam)) throw new exception();
     _rakam = new char(rakam);
     _sonraki = sonraki;
 }
 
 Dugum &Dugum::operator=(char rakam) {
-//    if(!rakamiDenetle(rakam)) throw new exception();
+//    if (!rakamiDenetle(rakam)) throw new exception();
     if (_rakam == NULL) _rakam = new char(rakam);
     else *_rakam = rakam;
 

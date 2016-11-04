@@ -1,30 +1,28 @@
 #include <iostream>
-#include "dugum.h"
-#include "gezici.h"
+#include <stdlib.h>
+#include "bagilliste.h"
 
 using namespace std;
 
 int main() {
-    Dugum *dugum = new Dugum('1');
-    Dugum *dugum1 = new Dugum('5');
-    Dugum *dugum2 = new Dugum('9');
+    system("CLS");
 
-    *dugum >> dugum1;
-    *dugum1 >> dugum2;
+    BagilListe *liste = new BagilListe();
+    liste->ekle('0');
+    liste->ekle('1');
+    liste->ekle('2');
+    liste->ekle('3');
+    liste->ekle('4');
+    liste->ekle('5');
+    liste->ekle('6');
+    liste->ekle('7');
+    liste->ekle('8');
+    liste->ekle('9');
+    liste->ekle('9', 5);
+    liste->ekle('0', 5);
 
-    cout << dugum->rakam() << endl;
-    cout << dugum1->rakam() << endl;
-    cout << dugum2->rakam();
+    cout << *liste;
 
-    *dugum = '7';
-
-    cout << endl << dugum->rakam() << endl;
-
-    Gezici *gezici = new Gezici(dugum);
-    cout << gezici->dugum()->rakam() << endl;
-    cout << (*gezici)++->dugum()->rakam() << endl;
-    cout << (*gezici)++->dugum()->rakam() << endl;
-
-    delete dugum, dugum1, dugum2, gezici;
+    delete liste;
     return 0;
 }

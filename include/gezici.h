@@ -7,9 +7,11 @@ class Gezici {
 private:
     Dugum *_dugum;
 public:
-    Gezici(Dugum *dugum);
+    Gezici(Dugum *);
 
     Gezici *operator++(int);
+
+    Gezici *operator>>(Dugum *);
 
     Dugum *dugum() const;
 };

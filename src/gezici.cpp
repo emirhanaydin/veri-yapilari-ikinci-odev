@@ -10,6 +10,12 @@ Gezici *Gezici::operator++(int) {
     return this;
 }
 
+Gezici *Gezici::operator>>(Dugum *dugum) {
+    _dugum = dugum;
+
+    return this;
+}
+
 Dugum *Gezici::dugum() const {
     return _dugum;
 }

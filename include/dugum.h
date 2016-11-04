@@ -2,7 +2,6 @@
 #define DUGUM_H
 
 #include <cstddef>
-#include <ostream>
 
 class Dugum {
 private:
