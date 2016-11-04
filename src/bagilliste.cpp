@@ -64,19 +64,22 @@ char BagilListe::getir(int indeks) const {
 void BagilListe::ekle(char rakam, int indeks) {
 //    if (indeks >= _boyut) throw new exception();
 
-    if (_boyut == 0) {
+    if (_boyut == 0) { // Listenin ilk elemanını ekleme işlemi.
         _ilk = new Dugum(rakam);
         _son = _ilk;
-        _gezici = new Gezici(_ilk);
-    } else if (indeks == 0) { // Liste başına eleman ekleme işlemi
+        if (_gezici == NULL)
+            _gezici = new Gezici(_ilk);
+        else
+            *_gezici >> _ilk;
+    } else if (indeks == 0) { // Liste başına eleman ekleme işlemi.
         Dugum *onceki = _ilk;
         _ilk = new Dugum(rakam);
         *_ilk >> onceki;
-    } else if (indeks == _boyut - 1 || indeks < 0) { // Liste sonuna eleman ekleme işlemi
+    } else if (indeks == _boyut - 1 || indeks < 0) { // Liste sonuna eleman ekleme işlemi.
         Dugum *onceki = _son;
         _son = new Dugum(rakam);
         *onceki >> _son;
-    } else { // Araya eleman ekleme işlemi
+    } else { // Araya eleman ekleme işlemi.
         Dugum *onceki = konumdaki(indeks - 1);
         Dugum *yeni = new Dugum(rakam);
         *yeni >> onceki->sonraki();
