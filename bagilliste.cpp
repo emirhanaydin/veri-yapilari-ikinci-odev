@@ -40,28 +40,36 @@ bool operator==(const BagilListe &liste, const BagilListe &liste1) {
 }
 
 BagilListe &operator+(const BagilListe &liste, const BagilListe &liste1) {
-    BagilListe kucuk = liste1._boyut > liste._boyut ? liste : liste1;
-    BagilListe buyuk = liste == kucuk ? liste : liste1;
+    const BagilListe *kucuk = liste._boyut > liste1._boyut ? &liste1 : &liste;
+    const BagilListe *buyuk = liste == *kucuk ? &liste1 : &liste;
     BagilListe *sonuc = new BagilListe();
-    int boyut = kucuk._boyut, boyut1 = buyuk._boyut;
+    int boyut = kucuk->_boyut, boyut1 = buyuk->_boyut;
     int sayi, sayi1, toplam = 0;
     bool elde = false;
 
     for (int i = 0; i < boyut; i++) {
-        sayi = kucuk.getir(boyut - 1 - i) - '0';
-        sayi1 = buyuk.getir(boyut1 - 1 - i) - '0';
+        sayi = kucuk->getir(boyut - 1 - i) - '0';
+        sayi1 = buyuk->getir(boyut1 - 1 - i) - '0';
         toplam = sayi + sayi1;
-        if (elde) toplam += 1;
+        if (elde) toplam++;
         elde = toplam >= 10;
 
         sonuc->ekle((char) (elde ? toplam - 10 : toplam) + '0', 0);
     }
 
-    if (boyut == boyut1 && elde) sonuc->ekle(buyuk.getir(boyut), 0);
-    else if (boyut1 > boyut && elde) sonuc->ekle(buyuk.getir(boyut), 0);
+    if (boyut == boyut1 && elde) {
+        sonuc->ekle('1', 0);
+    } else {
+//        if (boyut1 > boyut && elde) sonuc->ekle(buyuk.getir(boyut), 0);
 
-    for (int i = boyut1 - boyut - 2; i >= 0; i--) {
-        sonuc->ekle(buyuk.getir(i), 0);
+        for (int i = boyut1 - boyut - 1; i >= 0; i--) {
+            toplam = buyuk->getir(i);
+            if (elde) toplam++;
+            elde = toplam == 10;
+            sonuc->ekle((char) (elde ? 0 : toplam), 0);
+        }
+
+        if (elde) sonuc->ekle('1', 0);
     }
 
     return *sonuc;
@@ -90,9 +98,7 @@ void BagilListe::ekle(char rakam, int indeks) {
         else
             *_gezici >> _ilk;
     } else if (indeks == 0) { // Liste başına eleman ekleme işlemi.
-        Dugum *onceki = _ilk;
-        _ilk = new Dugum(rakam);
-        *_ilk >> onceki;
+        _ilk = new Dugum(rakam, _ilk);
     } else if (indeks == _boyut - 1 || indeks < 0) { // Liste sonuna eleman ekleme işlemi.
         Dugum *onceki = _son;
         _son = new Dugum(rakam);
