@@ -26,6 +26,10 @@ int Sayi::boyut() const {
     return _boyut;
 }
 
+char Sayi::getir(int indeks) const {
+    return _liste->getir(indeks);
+}
+
 void Sayi::rakamEkle(char rakam) {
     _liste->ekle(rakam);
     _boyut++;

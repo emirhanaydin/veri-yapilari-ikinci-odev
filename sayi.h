@@ -20,6 +20,8 @@ public:
 
     int boyut() const;
 
+    char getir(int) const;
+
     void rakamEkle(char rakam);
 
     void rakamSil();

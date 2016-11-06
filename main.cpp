@@ -14,9 +14,21 @@ int main() {
     cout << "2. sayi: ";
     Islem::sayiGir(*sayi1);
 
+    cout << endl << "1. seri: ";
+    Islem::ayrikYazdir(*sayi);
+
+    cout << endl << "2. seri: ";
+    Islem::ayrikYazdir(*sayi1);
+
     Sayi sayi2 = Islem::topla(*sayi, *sayi1);
 
-    cout << endl << "Toplam:  " << sayi2;
+    cout << endl << endl << "Toplam : " << sayi2 << endl;
+
+    cout << "Seri   : ";
+    Islem::ayrikYazdir(sayi2);
+
+    cout << endl << "Noktali: ";
+    Islem::noktaliYazdir(sayi2);
 
     delete sayi, sayi1, sayi2;
 

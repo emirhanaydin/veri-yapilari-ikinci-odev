@@ -31,7 +31,7 @@ public:
     /**
      * Belirtilen indekse verilen rakam karakterini içeren düğümü ekler.
      * @param rakam Eklenecek olan rakam karakteri.
-     * @param indeks [OPSIYONEL] Eğer belirtilmemişse liste sonuna eklenir.
+     * @param indeks [OPSİYONEL] Eğer belirtilmemişse liste sonuna eklenir.
      */
     void ekle(char rakam, int indeks = -1);
 

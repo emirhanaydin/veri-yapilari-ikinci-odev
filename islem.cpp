@@ -23,3 +23,29 @@ void Islem::sayiGir(Sayi &sayi) {
 Sayi &Islem::topla(Sayi &sayi, Sayi &sayi1) {
     return sayi + sayi1;
 }
+
+void Islem::ayrikYazdir(Sayi &sayi) {
+    for (int i = 0, j = sayi.boyut(); i < j; i++) {
+        for (int k = 0; k < 2; k++) {
+            if (k == 0)
+                std::cout << sayi.getir(i);
+            else if (i < j - 1)
+                std::cout << '-';
+        }
+    }
+}
+
+void Islem::noktaliYazdir(Sayi &sayi) {
+    int boyut = sayi.boyut();
+    int noktaSayaci = 3 - (boyut % 3);
+    if (noktaSayaci == 3) noktaSayaci = 0;
+
+    for (int i = 0; i < boyut; i++) {
+        std::cout << sayi.getir(i);
+        noktaSayaci++;
+        if (noktaSayaci == 3 && i < boyut - 1) {
+            std::cout << '.';
+            noktaSayaci = 0;
+        }
+    }
+}
