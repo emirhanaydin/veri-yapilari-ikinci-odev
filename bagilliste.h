@@ -11,8 +11,6 @@ private:
     Dugum *_son; // Son düğümü belirtir.
     Gezici *_gezici;
 
-    int konum(Dugum *) const;
-
     Dugum *konumdaki(int) const;
 
 public:
@@ -24,6 +22,10 @@ public:
      */
     friend std::ostream &operator<<(std::ostream &, const BagilListe &);
 
+    friend bool operator==(const BagilListe &, const BagilListe &);
+
+    friend BagilListe &operator+(const BagilListe &, const BagilListe &);
+
     char getir(int) const;
 
     /**
@@ -34,6 +36,8 @@ public:
     void ekle(char rakam, int indeks = -1);
 
     void sil(int indeks = -1);
+
+    int boyut() const;
 
     void temizle();
 

@@ -58,9 +58,8 @@ public:
 
     /**
      * Mevcut konumdan başlayarak sola doğru karakter siler.
-     * @param adet [OPSİYONEL] Silinecek olan karakter adedi. Girilmezse satır başına kadar tüm karakterler silinir.
      */
-    static void sil(int adet = 1);
+    static void sil();
 };
 
 #endif

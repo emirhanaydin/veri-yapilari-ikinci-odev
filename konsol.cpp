@@ -76,13 +76,10 @@ void Konsol::satiriDoldur(char karakter, int x, int y, bool geriyeDon, int uzunl
     }
 }
 
-void Konsol::sil(int adet) {
-    for (int i = 0; i < adet; i++)
-        std::cout << (char) 8;
+void Konsol::sil() {
+    std::cout << (char) 8;
 
-    for (int i = 0; i < adet; i++)
-        std::cout << ' ';
+    std::cout << ' ';
 
-    for (int i = 0; i < adet; i++)
-        std::cout << (char) 8;
+    std::cout << (char) 8;
 }

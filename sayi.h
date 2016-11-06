@@ -12,9 +12,17 @@ private:
 public:
     Sayi();
 
+    Sayi(BagilListe *);
+
     friend std::ostream &operator<<(std::ostream &, const Sayi &);
 
-    void sayiGir();
+    friend Sayi &operator+(const Sayi &, const Sayi &);
+
+    int boyut() const;
+
+    void rakamEkle(char rakam);
+
+    void rakamSil();
 
     ~Sayi();
 };

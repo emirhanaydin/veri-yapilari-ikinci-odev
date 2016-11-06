@@ -1,9 +1,13 @@
 #include "sayi.h"
-#include "konsol.h"
 
 Sayi::Sayi() {
     _liste = new BagilListe();
     _boyut = 0;
+}
+
+Sayi::Sayi(BagilListe *liste) {
+    _liste = liste;
+    _boyut = liste->boyut();
 }
 
 std::ostream &operator<<(std::ostream &os, const Sayi &sayi) {
@@ -12,18 +16,26 @@ std::ostream &operator<<(std::ostream &os, const Sayi &sayi) {
     return os;
 }
 
-void Sayi::sayiGir() {
-    for (char c = '\0'; c != '\r'; c = (char) _getch()) {
-        if (c >= '0' && c <= '9') {
-            std::cout << c;
-            _liste->ekle(c);
-            _boyut++;
-        } else if (c == (char)8 && _boyut > 0) {
-            Konsol::sil();
-            _liste->sil();
-            _boyut--;
-        }
-    }
+Sayi &operator+(const Sayi &sayi, const Sayi &sayi1) {
+    Sayi *yeni = new Sayi(&(*sayi._liste + *sayi1._liste));
+
+    return *yeni;
+}
+
+int Sayi::boyut() const {
+    return _boyut;
+}
+
+void Sayi::rakamEkle(char rakam) {
+    _liste->ekle(rakam);
+    _boyut++;
+}
+
+void Sayi::rakamSil() {
+    if (_boyut <= 0) return; // Hata durumu
+
+    _liste->sil();
+    _boyut--;
 }
 
 Sayi::~Sayi() {

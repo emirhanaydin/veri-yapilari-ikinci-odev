@@ -1,17 +1,31 @@
 #include <iostream>
 #include "bagilliste.h"
 #include "sayi.h"
+#include "islem.h"
 
 using namespace std;
 
 int main() {
     Sayi *sayi = new Sayi();
 
-    sayi->sayiGir();
+    cout << "1. sayi: ";
+
+    Islem::sayiGir(*sayi);
+
+    Sayi *sayi1 = new Sayi();
+
+    cout << "2. sayi: ";
+
+    Islem::sayiGir(*sayi1);
 
     cout << endl << *sayi;
+    cout << endl << *sayi1;
 
-    delete sayi;
+    Sayi sayi2 = Islem::topla(*sayi, *sayi1);
+
+    cout << endl << sayi2;
+
+    delete sayi, sayi1, sayi2;
 
     _getch();
     return 0;
