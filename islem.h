@@ -8,7 +8,7 @@ class Islem {
 public:
     static void sayiGir(Sayi &sayi);
 
-    static Sayi &topla(Sayi &sayi, Sayi &sayi1);
+    static Sayi topla(const Sayi &sayi, const Sayi &sayi1);
 
     static void ayrikYazdir(Sayi &);
 

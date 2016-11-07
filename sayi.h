@@ -16,13 +16,15 @@ public:
 
     friend std::ostream &operator<<(std::ostream &, const Sayi &);
 
-    friend Sayi &operator+(const Sayi &, const Sayi &);
+    friend bool operator==(const Sayi &, const Sayi &);
+
+    friend Sayi operator+(const Sayi &, const Sayi &);
 
     int boyut() const;
 
     char getir(int) const;
 
-    void rakamEkle(char rakam);
+    void ekle(char rakam, int indeks = -1);
 
     void rakamSil();
 

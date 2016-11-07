@@ -77,9 +77,7 @@ void Konsol::satiriDoldur(char karakter, int x, int y, bool geriyeDon, int uzunl
 }
 
 void Konsol::sil() {
-    std::cout << (char) 8;
-
-    std::cout << ' ';
-
-    std::cout << (char) 8;
+    std::cout << (char) 8; // BACKSPACE karakteri basılarak bir birim sola gidilir.
+    std::cout << ' '; // Boşluk karakteri basılarak önceki değerin üzerine yazılır.
+    std::cout << (char) 8; // Tekrar BACKSPACE karakteri basılarak bir birim geri gidilir.
 }

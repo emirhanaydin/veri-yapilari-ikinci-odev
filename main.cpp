@@ -1,5 +1,4 @@
 #include <iostream>
-#include "bagilliste.h"
 #include "sayi.h"
 #include "islem.h"
 
@@ -20,7 +19,7 @@ int main() {
     cout << endl << "2. seri: ";
     Islem::ayrikYazdir(*sayi1);
 
-    Sayi sayi2 = Islem::topla(*sayi, *sayi1);
+    Sayi sayi2 = *sayi + *sayi1;
 
     cout << endl << endl << "Toplam : " << sayi2 << endl;
 
@@ -30,7 +29,7 @@ int main() {
     cout << endl << "Noktali: ";
     Islem::noktaliYazdir(sayi2);
 
-    delete sayi, sayi1, sayi2;
+    delete sayi, sayi1;
 
     _getch();
     return 0;

@@ -10,9 +10,18 @@ private:
 public:
     Dugum();
 
-    Dugum(char, Dugum * = NULL);
+    /**
+     * @param rakam Tutulacak olan rakam karakteri.
+     * @return Bu düğümden sonra gelen düğümün adresi.
+     */
+    Dugum(char rakam, Dugum * = NULL);
 
-    Dugum &operator=(char);
+    /**
+     * Uygulanan karakteri kendi rakam değeri olarak kopyalar.
+     * @param rakam Atanacak olan karakter değeri.
+     * @return Tutulan rakam karakteri değiştirildikten sonra kendini döndürür.
+     */
+    Dugum &operator=(char rakam);
 
     /**
      * Stream extraction operator (akış çıkarma operatörü) mevcut düğümün sonraki

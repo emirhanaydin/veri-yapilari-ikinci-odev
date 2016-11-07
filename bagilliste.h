@@ -22,9 +22,11 @@ public:
      */
     friend std::ostream &operator<<(std::ostream &, const BagilListe &);
 
+    /**
+     * Listelerin adreslerini karşılaştırır.
+     * @return Adresleri aynı ise true, değilse false döndürür.
+     */
     friend bool operator==(const BagilListe &, const BagilListe &);
-
-    friend BagilListe &operator+(const BagilListe &, const BagilListe &);
 
     char getir(int) const;
 

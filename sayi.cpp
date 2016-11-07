@@ -1,4 +1,5 @@
 #include "sayi.h"
+#include "islem.h"
 
 Sayi::Sayi() {
     _liste = new BagilListe();
@@ -16,10 +17,12 @@ std::ostream &operator<<(std::ostream &os, const Sayi &sayi) {
     return os;
 }
 
-Sayi &operator+(const Sayi &sayi, const Sayi &sayi1) {
-    Sayi *yeni = new Sayi(&(*sayi._liste + *sayi1._liste));
+bool operator==(const Sayi &sayi, const Sayi &sayi1) {
+    return &sayi == &sayi1;
+}
 
-    return *yeni;
+Sayi operator+(const Sayi &sayi, const Sayi &sayi1) {
+    return Islem::topla(sayi, sayi1);
 }
 
 int Sayi::boyut() const {
@@ -30,8 +33,8 @@ char Sayi::getir(int indeks) const {
     return _liste->getir(indeks);
 }
 
-void Sayi::rakamEkle(char rakam) {
-    _liste->ekle(rakam);
+void Sayi::ekle(char rakam, int indeks) {
+    _liste->ekle(rakam, indeks);
     _boyut++;
 }
 
