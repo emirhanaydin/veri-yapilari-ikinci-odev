@@ -3,15 +3,16 @@ project(veri_yapilari_ikinci_odev_auto)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp dugum.cpp dugum.h
-        gezici.cpp gezici.h
-        bagilliste.cpp bagilliste.h
-        sayi.cpp sayi.h
-        islem.cpp islem.h
-        konsol.cpp konsol.h)
-add_executable(veri_yapilari_ikinci_odev_auto ${SOURCE_FILES} dugum.cpp dugum.h
-        gezici.cpp gezici.h
-        bagilliste.cpp bagilliste.h
-        sayi.cpp sayi.h
-        islem.cpp islem.h
-        konsol.cpp konsol.h)
+include_directories(include)
+set(SOURCE_FILES src/main.cpp src/dugum.cpp include/dugum.h
+        src/gezici.cpp include/gezici.h
+        src/bagilliste.cpp include/bagilliste.h
+        src/sayi.cpp include/sayi.h
+        src/islem.cpp include/islem.h
+        src/konsol.cpp include/konsol.h)
+add_executable(veri_yapilari_ikinci_odev_auto ${SOURCE_FILES} src/dugum.cpp include/dugum.h
+        src/gezici.cpp include/gezici.h
+        src/bagilliste.cpp include/bagilliste.h
+        src/sayi.cpp include/sayi.h
+        src/islem.cpp include/islem.h
+        src/konsol.cpp include/konsol.h)

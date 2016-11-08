@@ -2,20 +2,20 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/konsol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/konsol.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bagilliste.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/dugum.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/bagilliste.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gezici.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/konsol.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/islem.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/dugum.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/sayi.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sayi.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/gezici.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/islem.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/dugum.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/gezici.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sayi.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/islem.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bagilliste.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/gezici.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/konsol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/islem.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/bagilliste.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/sayi.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/include/dugum.h" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

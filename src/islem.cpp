@@ -30,26 +30,30 @@ Sayi Islem::topla(const Sayi &sayi, const Sayi &sayi1) {
     int rakam, rakam1, toplam = 0;
     bool elde = false;
 
-    for (int i = 0; i < kucukBoyut; i++) {
-        rakam = kucuk->getir(kucukBoyut - 1 - i) - '0';
-        rakam1 = buyuk->getir(buyukBoyut - 1 - i) - '0';
+    for (int i = kucukBoyut - 1, j = buyukBoyut - 1; i >= 0; i--, j--) {
+        rakam = kucuk->getir(i) - '0'; // Küçük boyutlu Sayı'nın şu anki karakterinin rakamsal değeri
+        rakam1 = buyuk->getir(j) - '0'; // Büyük boyutlu Sayı'nın şu anki karakterinin rakamsal değeri
         toplam = rakam + rakam1;
-        if (elde) toplam++;
+        if (elde) toplam++; // Daha önceki toplamdan elde değeri varsa toplam bir artırılır.
         elde = toplam >= 10;
 
+//        Yeni toplamdan elde değeri elde edilmişse toplamın 10 eksiği, yoksa kendisi sonuca eklenir.
         sonuc.ekle((char) (elde ? toplam - 10 : toplam) + '0', 0);
     }
 
-    if (kucukBoyut == buyukBoyut && elde) {
+    if (kucukBoyut == buyukBoyut && elde) { // Eğer iki Sayi'nın boyutları eşitse ve elde değeri varsa başa 1 eklenir.
         sonuc.ekle('1', 0);
-    } else {
+    } else { // Eğer bir Sayi diğerinden daha büyük boyutlu ise rakamları sonuca dahil edilir.
         for (int i = buyukBoyut - kucukBoyut - 1; i >= 0; i--) {
-            toplam = buyuk->getir(i) - '0';
-            if (elde) toplam++;
-            elde = toplam == 10;
+            toplam = buyuk->getir(i) - '0'; // Büyük boyutlu Sayi'nın şu anki karakterinin rakamsal değeri
+            if (elde) toplam++; // Daha önceki toplamdan elde değeri varsa toplam bir artırılır.
+            elde = toplam == 10; // Elde değeri 1 veya 0 olacağından değer 10'a eşitse tekrar elde vardır.
+
+//            Yeni toplamdan elde değeri elde edilmişse 0, yoksa kendisi sonuca eklenir.
             sonuc.ekle((elde ? '0' : (char) toplam + '0'), 0);
         }
 
+//        Tüm rakamlar eklendikten sonra elde değeri elde edilmişse başa 1 eklenir.
         if (elde) sonuc.ekle('1', 0);
     }
 

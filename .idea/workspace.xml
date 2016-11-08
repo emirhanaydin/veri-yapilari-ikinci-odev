@@ -11,18 +11,23 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bac684e-de11-443b-a123-2fff528995ab" name="Default" comment="Toplama işlemi Islem sınıfına taşındı ve buna bağlı değişiklikler diğer sınıflarda yapıldı.&#10;Bazı bölümlere yorum satırları eklendi ve kodlarda görsel küçük değişiklikler yapıldı.">
+    <list default="true" id="3bac684e-de11-443b-a123-2fff528995ab" name="Default" comment="Proje kaynak ve başlık dizinlerine ayrıldı.&#10;Toplama işleminde küçük geliştirmeler yapıldı.&#10;Yorum satırlarıyla açıklamalar yapıldı.">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bagilliste.cpp" afterPath="$PROJECT_DIR$/src/bagilliste.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bagilliste.h" afterPath="$PROJECT_DIR$/include/bagilliste.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dugum.cpp" afterPath="$PROJECT_DIR$/src/dugum.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/dugum.h" afterPath="$PROJECT_DIR$/include/dugum.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gezici.cpp" afterPath="$PROJECT_DIR$/src/gezici.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gezici.h" afterPath="$PROJECT_DIR$/include/gezici.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/islem.cpp" afterPath="$PROJECT_DIR$/src/islem.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/islem.h" afterPath="$PROJECT_DIR$/include/islem.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/konsol.cpp" afterPath="$PROJECT_DIR$/src/konsol.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/konsol.h" afterPath="$PROJECT_DIR$/include/konsol.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sayi.cpp" afterPath="$PROJECT_DIR$/src/sayi.cpp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sayi.h" afterPath="$PROJECT_DIR$/include/sayi.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/veri-yapilari-ikinci-odev-auto.iml" afterPath="$PROJECT_DIR$/.idea/veri-yapilari-ikinci-odev-auto.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bagilliste.cpp" afterPath="$PROJECT_DIR$/bagilliste.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bagilliste.h" afterPath="$PROJECT_DIR$/bagilliste.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dugum.h" afterPath="$PROJECT_DIR$/dugum.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gezici.h" afterPath="$PROJECT_DIR$/gezici.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/islem.cpp" afterPath="$PROJECT_DIR$/islem.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/islem.h" afterPath="$PROJECT_DIR$/islem.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/konsol.cpp" afterPath="$PROJECT_DIR$/konsol.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sayi.cpp" afterPath="$PROJECT_DIR$/sayi.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sayi.h" afterPath="$PROJECT_DIR$/sayi.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
     </list>
     <ignored path="veri-yapilari-ikinci-odev-auto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,10 +50,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.cpp">
+            <entry file="file://$PROJECT_DIR$/src/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state relative-caret-position="295">
+                  <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -57,69 +62,60 @@
             </entry>
           </file>
           <file leaf-file-name="konsol.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/konsol.cpp">
+            <entry file="file://$PROJECT_DIR$/src/konsol.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+                <state relative-caret-position="88">
+                  <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#186#0" expanded="false" />
-                    <element signature="e#308#641#0" expanded="false" />
-                    <element signature="e#643#846#0" expanded="false" />
-                    <element signature="e#848#1110#0" expanded="false" />
-                    <element signature="e#1112#1282#0" expanded="false" />
-                    <element signature="e#1284#1454#0" expanded="false" />
-                    <element signature="e#1456#1542#0" expanded="false" />
-                    <element signature="e#1544#2041#0" expanded="false" />
-                    <element signature="e#2043#2324#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sayi.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sayi.cpp">
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+                <state relative-caret-position="110">
+                  <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sayi.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/sayi.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#17#0" expanded="true" />
-                    <element signature="e#38#101#0" expanded="false" />
-                    <element signature="e#103#185#0" expanded="false" />
-                    <element signature="e#474#520#0" expanded="false" />
-                    <element signature="e#688#791#0" expanded="false" />
-                    <element signature="e#793#829#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="dugum.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dugum.cpp">
+            <entry file="file://$PROJECT_DIR$/src/dugum.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#20#78#0" expanded="false" />
-                    <element signature="e#80#234#0" expanded="false" />
-                    <element signature="e#236#426#0" expanded="false" />
-                    <element signature="e#428#510#0" expanded="false" />
-                    <element signature="e#512#648#0" expanded="false" />
-                    <element signature="e#701#755#0" expanded="false" />
-                    <element signature="e#757#795#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="0">
+                  <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="bagilliste.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bagilliste.cpp">
+          <file leaf-file-name="bagilliste.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/bagilliste.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="188">
-                  <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
                   <folding>
                     <element signature="e#25#123#0" expanded="false" />
+                    <element signature="e#125#413#0" expanded="false" />
                     <element signature="e#415#778#0" expanded="false" />
                     <element signature="e#780#880#0" expanded="false" />
+                    <element signature="e#882#1160#0" expanded="false" />
                     <element signature="e#1162#2052#0" expanded="false" />
                     <element signature="e#2054#2783#0" expanded="false" />
                     <element signature="e#2785#2837#0" expanded="false" />
@@ -131,24 +127,25 @@
             </entry>
           </file>
           <file leaf-file-name="gezici.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gezici.cpp">
+            <entry file="file://$PROJECT_DIR$/src/gezici.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="islem.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/islem.cpp">
+          <file leaf-file-name="islem.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/islem.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="458">
-                  <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+                <state relative-caret-position="286">
+                  <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
                   <folding>
+                    <element signature="e#0#18#0" expanded="true" />
                     <element signature="e#40#803#0" expanded="false" />
-                    <element signature="e#2098#2377#0" expanded="false" />
-                    <element signature="e#2379#2754#0" expanded="false" />
+                    <element signature="e#2920#3199#0" expanded="false" />
+                    <element signature="e#3201#3576#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -158,20 +155,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="sayi.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/sayi.h">
+          <file leaf-file-name="sayi.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/include/sayi.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+                <state relative-caret-position="346">
+                  <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="bagilliste.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bagilliste.h">
+            <entry file="file://$PROJECT_DIR$/include/bagilliste.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
+                <state relative-caret-position="616">
                   <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
                   <folding>
                     <element signature="e#742#954#0" expanded="false" />
@@ -181,9 +178,9 @@
             </entry>
           </file>
           <file leaf-file-name="dugum.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dugum.h">
+            <entry file="file://$PROJECT_DIR$/include/dugum.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="454">
+                <state relative-caret-position="880">
                   <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding />
                 </state>
@@ -191,7 +188,7 @@
             </entry>
           </file>
           <file leaf-file-name="konsol.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/konsol.h">
+            <entry file="file://$PROJECT_DIR$/include/konsol.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1276">
                   <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
@@ -201,7 +198,7 @@
             </entry>
           </file>
           <file leaf-file-name="gezici.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/gezici.h">
+            <entry file="file://$PROJECT_DIR$/include/gezici.h">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="198">
                   <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -210,11 +207,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="islem.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/islem.h">
+          <file leaf-file-name="islem.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/include/islem.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+                <state relative-caret-position="484">
+                  <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
                   <folding>
                     <element signature="e#33#52#0" expanded="true" />
                   </folding>
@@ -239,17 +236,25 @@
       <list>
         <option value="$PROJECT_DIR$/dugum.cpp" />
         <option value="$PROJECT_DIR$/konsol.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/gezici.h" />
         <option value="$PROJECT_DIR$/dugum.h" />
         <option value="$PROJECT_DIR$/konsol.cpp" />
         <option value="$PROJECT_DIR$/bagilliste.h" />
         <option value="$PROJECT_DIR$/bagilliste.cpp" />
-        <option value="$PROJECT_DIR$/islem.h" />
         <option value="$PROJECT_DIR$/sayi.cpp" />
         <option value="$PROJECT_DIR$/sayi.h" />
-        <option value="$PROJECT_DIR$/islem.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/islem.h" />
+        <option value="$PROJECT_DIR$/islem.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/konsol.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/sayi.cpp" />
+        <option value="$PROJECT_DIR$/src/dugum.cpp" />
+        <option value="$PROJECT_DIR$/src/bagilliste.cpp" />
+        <option value="$PROJECT_DIR$/src/gezici.cpp" />
+        <option value="$PROJECT_DIR$/src/islem.cpp" />
+        <option value="$PROJECT_DIR$/include/islem.h" />
       </list>
     </option>
   </component>
@@ -277,7 +282,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -290,12 +295,22 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Emirhan\OneDrive\Belgeler\Projeler\Repositories\veri-yapilari-ikinci-odev-ide\include" />
+      <recent name="C:\Users\Emirhan\OneDrive\Belgeler\Projeler\Repositories\veri-yapilari-ikinci-odev-ide\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Build All">
     <configuration default="true" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
@@ -488,7 +503,8 @@
       <workItem from="1478388899164" duration="2463000" />
       <workItem from="1478410177096" duration="37308000" />
       <workItem from="1478504799383" duration="1816000" />
-      <workItem from="1478539803783" duration="6592000" />
+      <workItem from="1478539803783" duration="6715000" />
+      <workItem from="1478578465453" duration="2772000" />
     </task>
     <task id="LOCAL-00001" summary="Sayıların toplanması işlemi kısmen doğru çalışır hale getirildi.">
       <created>1478445878408</created>
@@ -511,11 +527,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478466658673</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Toplama işlemi Islem sınıfına taşındı ve buna bağlı değişiklikler diğer sınıflarda yapıldı.&#10;Bazı bölümlere yorum satırları eklendi ve kodlarda görsel küçük değişiklikler yapıldı.">
+      <created>1478549016014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1478549016014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62796000" />
+    <option name="totallyTimeSpent" value="65691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,11 +551,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24854574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24827586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -551,6 +574,24 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -568,19 +609,20 @@
     <MESSAGE value="Sayıları toplama işlemi tamamlandı." />
     <MESSAGE value="Program tamamlandı. Göndermeden önce yapılacaklar:&#10;- Görsel ara yüz test amaçlı tasarlandı, yeniden tasarlanmalı.&#10;- Sınıflar yeterince yorum satırıyla açıklanmalı.&#10;- Yazımlar kontrol edilir temizlenmeli.&#10;- Detaylı bellek sızıntısı kontrolü yapılmalı.&#10;- Başlık yorum blokları tüm dosyalara eklenmeli.&#10;- Program istenilen dosyalama formatına çevrilmeli." />
     <MESSAGE value="Toplama işlemi Islem sınıfına taşındı ve buna bağlı değişiklikler diğer sınıflarda yapıldı.&#10;Bazı bölümlere yorum satırları eklendi ve kodlarda görsel küçük değişiklikler yapıldı." />
-    <option name="LAST_COMMIT_MESSAGE" value="Toplama işlemi Islem sınıfına taşındı ve buna bağlı değişiklikler diğer sınıflarda yapıldı.&#10;Bazı bölümlere yorum satırları eklendi ve kodlarda görsel küçük değişiklikler yapıldı." />
+    <MESSAGE value="Proje kaynak ve başlık dizinlerine ayrıldı.&#10;Toplama işleminde küçük geliştirmeler yapıldı.&#10;Yorum satırlarıyla açıklamalar yapıldı." />
+    <option name="LAST_COMMIT_MESSAGE" value="Proje kaynak ve başlık dizinlerine ayrıldı.&#10;Toplama işleminde küçük geliştirmeler yapıldı.&#10;Yorum satırlarıyla açıklamalar yapıldı." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="41" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gezici.h">
+    <entry file="file://$PROJECT_DIR$/include/gezici.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
@@ -588,7 +630,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.h">
+    <entry file="file://$PROJECT_DIR$/include/konsol.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -596,7 +638,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -606,41 +648,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.cpp">
+    <entry file="file://$PROJECT_DIR$/src/konsol.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
           <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
           <folding>
             <element signature="e#0#186#0" expanded="false" />
-            <element signature="e#308#641#0" expanded="false" />
-            <element signature="e#643#846#0" expanded="false" />
-            <element signature="e#848#1110#0" expanded="false" />
-            <element signature="e#1112#1282#0" expanded="false" />
-            <element signature="e#1284#1454#0" expanded="false" />
-            <element signature="e#1456#1542#0" expanded="false" />
-            <element signature="e#1544#2041#0" expanded="false" />
-            <element signature="e#2043#2324#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.cpp">
+    <entry file="file://$PROJECT_DIR$/src/dugum.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#78#0" expanded="false" />
-            <element signature="e#80#234#0" expanded="false" />
-            <element signature="e#236#426#0" expanded="false" />
-            <element signature="e#428#510#0" expanded="false" />
-            <element signature="e#512#648#0" expanded="false" />
-            <element signature="e#701#755#0" expanded="false" />
-            <element signature="e#757#795#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.cpp">
+    <entry file="file://$PROJECT_DIR$/src/gezici.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -648,29 +674,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.cpp">
+    <entry file="file://$PROJECT_DIR$/src/sayi.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#38#101#0" expanded="false" />
-            <element signature="e#103#185#0" expanded="false" />
-            <element signature="e#474#520#0" expanded="false" />
-            <element signature="e#688#791#0" expanded="false" />
-            <element signature="e#793#829#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.cpp">
+    <entry file="file://$PROJECT_DIR$/src/bagilliste.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1562">
           <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#25#123#0" expanded="false" />
+            <element signature="e#125#413#0" expanded="false" />
             <element signature="e#415#778#0" expanded="false" />
             <element signature="e#780#880#0" expanded="false" />
+            <element signature="e#882#1160#0" expanded="false" />
             <element signature="e#1162#2052#0" expanded="false" />
             <element signature="e#2054#2783#0" expanded="false" />
             <element signature="e#2785#2837#0" expanded="false" />
@@ -680,7 +703,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.h">
+    <entry file="file://$PROJECT_DIR$/include/sayi.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
@@ -688,7 +711,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.h">
+    <entry file="file://$PROJECT_DIR$/include/bagilliste.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -698,7 +721,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.h">
+    <entry file="file://$PROJECT_DIR$/include/dugum.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -706,7 +729,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.h">
+    <entry file="file://$PROJECT_DIR$/include/gezici.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
@@ -714,7 +737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.h">
+    <entry file="file://$PROJECT_DIR$/include/konsol.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
@@ -722,7 +745,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
@@ -732,41 +755,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.cpp">
+    <entry file="file://$PROJECT_DIR$/src/konsol.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
           <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
           <folding>
             <element signature="e#0#186#0" expanded="false" />
-            <element signature="e#308#641#0" expanded="false" />
-            <element signature="e#643#846#0" expanded="false" />
-            <element signature="e#848#1110#0" expanded="false" />
-            <element signature="e#1112#1282#0" expanded="false" />
-            <element signature="e#1284#1454#0" expanded="false" />
-            <element signature="e#1456#1542#0" expanded="false" />
-            <element signature="e#1544#2041#0" expanded="false" />
-            <element signature="e#2043#2324#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.cpp">
+    <entry file="file://$PROJECT_DIR$/src/dugum.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#78#0" expanded="false" />
-            <element signature="e#80#234#0" expanded="false" />
-            <element signature="e#236#426#0" expanded="false" />
-            <element signature="e#428#510#0" expanded="false" />
-            <element signature="e#512#648#0" expanded="false" />
-            <element signature="e#701#755#0" expanded="false" />
-            <element signature="e#757#795#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.cpp">
+    <entry file="file://$PROJECT_DIR$/src/gezici.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -774,29 +781,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.cpp">
+    <entry file="file://$PROJECT_DIR$/src/sayi.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#38#101#0" expanded="false" />
-            <element signature="e#103#185#0" expanded="false" />
-            <element signature="e#474#520#0" expanded="false" />
-            <element signature="e#688#791#0" expanded="false" />
-            <element signature="e#793#829#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.cpp">
+    <entry file="file://$PROJECT_DIR$/src/bagilliste.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1562">
           <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding>
             <element signature="e#25#123#0" expanded="false" />
+            <element signature="e#125#413#0" expanded="false" />
             <element signature="e#415#778#0" expanded="false" />
             <element signature="e#780#880#0" expanded="false" />
+            <element signature="e#882#1160#0" expanded="false" />
             <element signature="e#1162#2052#0" expanded="false" />
             <element signature="e#2054#2783#0" expanded="false" />
             <element signature="e#2785#2837#0" expanded="false" />
@@ -806,7 +810,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.h">
+    <entry file="file://$PROJECT_DIR$/include/sayi.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
@@ -814,7 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.h">
+    <entry file="file://$PROJECT_DIR$/include/bagilliste.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -824,7 +828,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.h">
+    <entry file="file://$PROJECT_DIR$/include/dugum.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -832,7 +836,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.h">
+    <entry file="file://$PROJECT_DIR$/include/gezici.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
@@ -840,7 +844,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.h">
+    <entry file="file://$PROJECT_DIR$/include/konsol.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
@@ -848,7 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -858,41 +862,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.cpp">
+    <entry file="file://$PROJECT_DIR$/src/konsol.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
           <caret line="78" column="28" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
           <folding>
             <element signature="e#0#186#0" expanded="false" />
-            <element signature="e#308#641#0" expanded="false" />
-            <element signature="e#643#846#0" expanded="false" />
-            <element signature="e#848#1110#0" expanded="false" />
-            <element signature="e#1112#1282#0" expanded="false" />
-            <element signature="e#1284#1454#0" expanded="false" />
-            <element signature="e#1456#1542#0" expanded="false" />
-            <element signature="e#1544#2041#0" expanded="false" />
-            <element signature="e#2043#2324#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.cpp">
+    <entry file="file://$PROJECT_DIR$/src/dugum.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#20#78#0" expanded="false" />
-            <element signature="e#80#234#0" expanded="false" />
-            <element signature="e#236#426#0" expanded="false" />
-            <element signature="e#428#510#0" expanded="false" />
-            <element signature="e#512#648#0" expanded="false" />
-            <element signature="e#701#755#0" expanded="false" />
-            <element signature="e#757#795#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.cpp">
+    <entry file="file://$PROJECT_DIR$/src/gezici.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -900,29 +888,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.cpp">
+    <entry file="file://$PROJECT_DIR$/src/sayi.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#38#101#0" expanded="false" />
-            <element signature="e#103#185#0" expanded="false" />
-            <element signature="e#474#520#0" expanded="false" />
-            <element signature="e#688#791#0" expanded="false" />
-            <element signature="e#793#829#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.cpp">
+    <entry file="file://$PROJECT_DIR$/src/bagilliste.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2068">
           <caret line="94" column="28" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
           <folding>
             <element signature="e#25#123#0" expanded="false" />
+            <element signature="e#125#413#0" expanded="false" />
             <element signature="e#415#778#0" expanded="false" />
             <element signature="e#780#880#0" expanded="false" />
+            <element signature="e#882#1160#0" expanded="false" />
             <element signature="e#1162#2052#0" expanded="false" />
             <element signature="e#2054#2783#0" expanded="false" />
             <element signature="e#2785#2837#0" expanded="false" />
@@ -932,7 +917,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.h">
+    <entry file="file://$PROJECT_DIR$/include/sayi.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
@@ -940,7 +925,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.h">
+    <entry file="file://$PROJECT_DIR$/include/bagilliste.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -950,7 +935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.h">
+    <entry file="file://$PROJECT_DIR$/include/dugum.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -958,7 +943,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.h">
+    <entry file="file://$PROJECT_DIR$/include/gezici.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
@@ -966,7 +951,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.h">
+    <entry file="file://$PROJECT_DIR$/include/konsol.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1364">
           <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
@@ -976,14 +961,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sample.cpp" />
     <entry file="file://$PROJECT_DIR$/Sample.h" />
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.h">
+    <entry file="file://$PROJECT_DIR$/include/gezici.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -991,7 +969,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.h">
+    <entry file="file://$PROJECT_DIR$/include/konsol.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
           <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
@@ -999,17 +977,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.h">
+    <entry file="file://$PROJECT_DIR$/include/dugum.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
+        <state relative-caret-position="880">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.h">
+    <entry file="file://$PROJECT_DIR$/include/bagilliste.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="616">
           <caret line="28" column="67" selection-start-line="28" selection-start-column="67" selection-end-line="28" selection-end-column="67" />
           <folding>
             <element signature="e#742#954#0" expanded="false" />
@@ -1017,66 +995,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/konsol.cpp">
+    <entry file="file://$PROJECT_DIR$/include/sayi.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="78" column="19" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#186#0" expanded="false" />
-            <element signature="e#308#641#0" expanded="false" />
-            <element signature="e#643#846#0" expanded="false" />
-            <element signature="e#848#1110#0" expanded="false" />
-            <element signature="e#1112#1282#0" expanded="false" />
-            <element signature="e#1284#1454#0" expanded="false" />
-            <element signature="e#1456#1542#0" expanded="false" />
-            <element signature="e#1544#2041#0" expanded="false" />
-            <element signature="e#2043#2324#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/islem.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#33#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gezici.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="346">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dugum.cpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="110">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gezici.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dugum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/konsol.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
-            <element signature="e#20#78#0" expanded="false" />
-            <element signature="e#80#234#0" expanded="false" />
-            <element signature="e#236#426#0" expanded="false" />
-            <element signature="e#428#510#0" expanded="false" />
-            <element signature="e#512#648#0" expanded="false" />
-            <element signature="e#701#755#0" expanded="false" />
-            <element signature="e#757#795#0" expanded="false" />
+            <element signature="e#0#186#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bagilliste.cpp">
+    <entry file="file://$PROJECT_DIR$/src/sayi.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/islem.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#40#803#0" expanded="false" />
+            <element signature="e#2920#3199#0" expanded="false" />
+            <element signature="e#3201#3576#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bagilliste.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding>
             <element signature="e#25#123#0" expanded="false" />
+            <element signature="e#125#413#0" expanded="false" />
             <element signature="e#415#778#0" expanded="false" />
             <element signature="e#780#880#0" expanded="false" />
+            <element signature="e#882#1160#0" expanded="false" />
             <element signature="e#1162#2052#0" expanded="false" />
             <element signature="e#2054#2783#0" expanded="false" />
             <element signature="e#2785#2837#0" expanded="false" />
@@ -1086,47 +1089,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.h">
+    <entry file="file://$PROJECT_DIR$/include/islem.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sayi.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="484">
+          <caret line="22" column="74" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
           <folding>
-            <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#38#101#0" expanded="false" />
-            <element signature="e#103#185#0" expanded="false" />
-            <element signature="e#474#520#0" expanded="false" />
-            <element signature="e#688#791#0" expanded="false" />
-            <element signature="e#793#829#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/islem.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#40#803#0" expanded="false" />
-            <element signature="e#2098#2377#0" expanded="false" />
-            <element signature="e#2379#2754#0" expanded="false" />
+            <element signature="e#33#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
