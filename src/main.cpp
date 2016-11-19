@@ -1,3 +1,12 @@
+/**
+* @file main.cpp
+* @description Kullanıcıdan iki farklı sayı alınır ve toplama işlemi uygulanarak sonuç ekrana yazdırılır.
+* @course 2A
+* @assignment 2
+* @date 3.11.2016
+* @author Emirhan Aydın (g141210018@sakarya.edu.tr)
+*/
+
 #include <iostream>
 #include <secim.h>
 #include "sayi.h"
@@ -5,50 +14,55 @@
 using namespace std;
 
 int main() {
-    bool tekrar;
+    Sayi *sayi1 = new Sayi();
+    Sayi *sayi2 = new Sayi();
 
     do {
         system("CLS");
-        cout << "Toplamlarini hesaplamak uzere, uzunlugu sinirlandirilmamis iki sayi giriniz." << endl << endl;
+        cout << "Toplamlari hesaplanacak olan uzunlugu sinirlandirilmamis iki sayi giriniz." << endl << endl;
 
-        Konsol::imleciGoster();
+//        Konsol::imleciGoster();
 
-        Sayi *sayi = new Sayi();
-        cout << "1. sayi : ";
-        sayi->sayiGir();
-
-        Sayi *sayi1 = new Sayi();
-        cout << "2. sayi : ";
+        sayi1->temizle();
+        Konsol::renkliYazdir("1. sayi : ", 14);
         sayi1->sayiGir();
 
-        cout << endl << "1. liste: ";
-        sayi->yazdir(Sayi::liste);
+        sayi2->temizle();
+        Konsol::renkliYazdir("2. sayi : ", 11);
+//        cout << "2. sayi : ";
+        sayi2->sayiGir();
 
-        cout << endl << "2. liste: ";
+        cout << endl;
+        Konsol::renkliYazdir("1. liste: ", 14);
         sayi1->yazdir(Sayi::liste);
 
-        Sayi sayi2 = *sayi + *sayi1;
+        cout << endl;
+        Konsol::renkliYazdir("2. liste: ", 11);
+        sayi2->yazdir(Sayi::liste);
 
-        cout << endl << endl << "Toplam  : " << sayi2 << endl;
+        Sayi toplam = *sayi1 + *sayi2;
 
-        cout << "Liste   : ";
-        sayi2.yazdir(Sayi::liste);
+        cout << endl << endl;
+        Konsol::renkliYazdir("Toplam  : ", 10);
+        cout << toplam << endl;
 
-        if (sayi2.boyut() > 3) {
-            cout << endl << "Noktali : ";
-            sayi2.yazdir(Sayi::noktali);
+        Konsol::renkliYazdir("Liste   : ", 10);
+        toplam.yazdir(Sayi::liste);
+
+        if (toplam.boyut() > 3) {
+            cout << endl;
+            Konsol::renkliYazdir("Noktali : ", 10);
+            toplam.yazdir(Sayi::noktali);
         }
-
-        delete sayi;
-        delete sayi1;
 
         cout << endl << endl;
         cout << "Yeni bir toplama islemi yapmak istiyor musunuz?" << endl << endl << endl;
-        Konsol::imleciGoster(false);
+//        Konsol::imleciGoster(false);
+    } while (Secim::onayMenusu());
 
-        tekrar = Secim::onayMenusu();
-    } while (tekrar);
+    delete sayi1;
+    delete sayi2;
 
-    Konsol::imleciGoster();
+//    Konsol::imleciGoster();
     return 0;
 }

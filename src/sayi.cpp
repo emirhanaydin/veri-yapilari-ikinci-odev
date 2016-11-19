@@ -1,3 +1,12 @@
+/**
+* @file sayi.cpp
+* @description Açıklama ilgili başlık dosyasında yapılmıştır.
+* @course 2A
+* @assignment 2
+* @date 5.11.2016
+* @author Emirhan Aydın (g141210018@sakarya.edu.tr)
+*/
+
 #include "sayi.h"
 #include "islem.h"
 
@@ -57,10 +66,15 @@ void Sayi::yazdir(Sayi::Bicim bicim) {
 }
 
 void Sayi::rakamSil() {
-    if (_boyut <= 0) return; // Hata durumu
+    if (_boyut <= 0) return; // TODO throw Exception();
 
-    _liste->sil();
+    _liste->sil(); // En son eleman diziden silinir.
     _boyut--;
+}
+
+void Sayi::temizle() {
+    _liste->temizle();
+    _boyut = 0;
 }
 
 Sayi::~Sayi() {

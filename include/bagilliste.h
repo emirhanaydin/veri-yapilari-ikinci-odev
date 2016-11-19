@@ -1,3 +1,13 @@
+/**
+* @file bagilliste.h
+* @description Bağıl liste veriyi birbirinden bağımsız bellek hücrelerinde saklar ve göstericiler aracılığıyla bağlantı
+ * kurar. Her bir veri ve sonraki hücrenin adresi bir düğümde saklanır.
+* @course 2A
+* @assignment 2
+* @date 3.11.2016
+* @author Emirhan Aydın (g141210018@sakarya.edu.tr)
+*/
+
 #ifndef BAGILLISTE_H
 #define BAGILLISTE_H
 

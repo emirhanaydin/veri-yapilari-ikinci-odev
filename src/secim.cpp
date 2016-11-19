@@ -1,3 +1,12 @@
+/**
+* @file secim.cpp
+* @description Açıklama ilgili başlık dosyasında yapılmıştır.
+* @course 2A
+* @assignment 2
+* @date 19.11.2016
+* @author Emirhan Aydın (g141210018@sakarya.edu.tr)
+*/
+
 #include "secim.h"
 
 int Secim::yonTuslariSecimi(int secenek, int secenekSayisi, char geriye, char ileriye, char onay) {
@@ -58,9 +67,12 @@ void Secim::dikeySecim(std::string *secenekler, int secenekSayisi, int &secenek)
     } while (true); // Seçim döngüsü sonu
 }
 
-bool Secim::onayMenusu() {
+bool Secim::onayMenusu(bool imleciGizle) {
+    bool imleciTersle = Konsol::imlecGorunurMu() == imleciGizle;
+    if (imleciTersle) Konsol::imleciGoster(!imleciGizle);
     string secenekler[] = {"Evet", "Hayir"};
     int secenek = 0;
     dikeySecim(secenekler, 2, secenek);
+    if (imleciTersle) Konsol::imleciGoster(imleciGizle);
     return secenek == 0;
 }

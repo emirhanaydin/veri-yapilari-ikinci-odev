@@ -32,6 +32,12 @@ void Konsol::imleciGoster(bool gorunur) {
     SetConsoleCursorInfo(konsol, &cci);
 }
 
+bool Konsol::imlecGorunurMu() {
+    CONSOLE_CURSOR_INFO cci;
+    GetConsoleCursorInfo(konsol, &cci);
+    return (const bool) cci.bVisible;
+}
+
 void Konsol::imleciTasi(int x, int y) {
     int konumX = x < 0 ? Konsol::alImlecX() : x;
     int konumY = y < 0 ? Konsol::alImlecY() : y;
@@ -56,8 +62,25 @@ int Konsol::alImlecY() {
     return csbi.dwCursorPosition.Y;
 }
 
+bool Konsol::alYaziRengi(short &renk) {
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    if (!GetConsoleScreenBufferInfo(konsol, &csbi))
+        return false;
+
+    renk = csbi.wAttributes;
+    return true;
+}
+
 void Konsol::yaziRengi(int renk) {
     SetConsoleTextAttribute(konsol, (WORD) renk);
+}
+
+void Konsol::renkliYazdir(const char *yazi, int renk) {
+    short mevcutRenk;
+    Konsol::alYaziRengi(mevcutRenk);
+    Konsol::yaziRengi(renk);
+    std::cout << yazi;
+    Konsol::yaziRengi(mevcutRenk);
 }
 
 void Konsol::satiriDoldur(char karakter, int x, int y, bool geriyeDon, int uzunluk) {

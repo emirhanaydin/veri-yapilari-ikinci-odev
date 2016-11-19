@@ -1,3 +1,12 @@
+/**
+* @file gezici.h
+* @description İlişkiler düğümler arasında ileriye doğru taramayı kolaylaştırmak için kullanılır.
+* @course 2A
+* @assignment 2
+* @date 3.11.2016
+* @author Emirhan Aydın (g141210018@sakarya.edu.tr)
+*/
+
 #ifndef GEZICI_H
 #define GEZICI_H
 
