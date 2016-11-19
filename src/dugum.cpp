@@ -5,16 +5,14 @@ Dugum::Dugum() {
     _sonraki = NULL;
 }
 
-Dugum::Dugum(char rakam, Dugum *sonraki) {
-//    if (!rakamiDenetle(rakam)) throw new exception();
-    _rakam = new char(rakam);
+Dugum::Dugum(char karakter, Dugum *sonraki) {
+    _rakam = new char(karakter);
     _sonraki = sonraki;
 }
 
-Dugum &Dugum::operator=(char rakam) {
-//    if (!rakamiDenetle(rakam)) throw new exception();
-    if (_rakam == NULL) _rakam = new char(rakam);
-    else *_rakam = rakam;
+Dugum &Dugum::operator=(char karakter) {
+    if (_rakam == NULL) _rakam = new char(karakter);
+    else *_rakam = karakter;
 
     return *this;
 }
@@ -23,11 +21,6 @@ Dugum *Dugum::operator>>(Dugum *dugum) {
     _sonraki = dugum;
 
     return this;
-}
-
-bool Dugum::rakamiDenetle(char &rakam) const {
-    char sayisalDeger = rakam - '0';
-    return sayisalDeger >= 0 && sayisalDeger <= 9;
 }
 
 char Dugum::rakam() const {

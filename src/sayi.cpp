@@ -33,9 +33,27 @@ char Sayi::getir(int indeks) const {
     return _liste->getir(indeks);
 }
 
+void Sayi::sayiGir() {
+    Islem::sayiGir(*this);
+}
+
 void Sayi::ekle(char rakam, int indeks) {
     _liste->ekle(rakam, indeks);
     _boyut++;
+}
+
+void Sayi::yazdir(Sayi::Bicim bicim) {
+    switch (bicim) {
+        case ardisik:
+            std::cout << *this;
+            break;
+        case liste:
+            Islem::ayrikYazdir(*this);
+            break;
+        case noktali:
+            Islem::noktaliYazdir(*this);
+            break;
+    }
 }
 
 void Sayi::rakamSil() {

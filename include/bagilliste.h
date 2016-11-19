@@ -37,6 +37,10 @@ public:
      */
     void ekle(char rakam, int indeks = -1);
 
+    /**
+     * Belirtilen indeksteki düğümü siler.
+     * @param indeks [OPSİYONEL] Eğer belirtilmemişse son karakter silinir.
+     */
     void sil(int indeks = -1);
 
     int boyut() const;

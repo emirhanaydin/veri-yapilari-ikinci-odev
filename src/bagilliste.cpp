@@ -17,7 +17,7 @@ Dugum *BagilListe::konumdaki(int indeks) const {
         (*_gezici)++; // Gezici bir sonraki düğüme taşınır.
     }
 
-//    throw new exception();
+//    TODO throw Exception();
     return NULL;
 }
 
@@ -40,19 +40,19 @@ bool operator==(const BagilListe &liste, const BagilListe &liste1) {
 }
 
 char BagilListe::getir(int indeks) const {
-//    if (indeks >= boyut || indeks < 0) throw exception;
+//    TODO if (indeks >= boyut || indeks < 0) throw Exception();
 
     if (indeks == _boyut - 1)
         return _son->rakam();
 
     Dugum *dugum = konumdaki(indeks);
 
-//    if (dugum == NULL) throw new exception();
+//    TODO if (dugum == NULL) throw Exception();
     return dugum->rakam();
 }
 
 void BagilListe::ekle(char rakam, int indeks) {
-//    if (indeks >= _boyut) throw new exception();
+//    TODO if (indeks >= _boyut) throw Exception();
 
     if (_boyut == 0) { // Listenin ilk elemanını ekleme işlemi.
         _ilk = new Dugum(rakam);
@@ -79,8 +79,9 @@ void BagilListe::ekle(char rakam, int indeks) {
 }
 
 void BagilListe::sil(int indeks) {
-//    if (indeks >= _boyut) throw new exception;
-    if (_boyut <= 0) return;
+//    TODO if (indeks >= _boyut) throw Exception();
+//    TODO if (_boyut <= 0) throw Exception();
+    if (_boyut < 1) return;
 
     if (indeks < 0) indeks = _boyut - 1;
 
@@ -110,6 +111,8 @@ int BagilListe::boyut() const {
 }
 
 void BagilListe::temizle() {
+    if (_boyut < 1) return;
+
     *_gezici >> _ilk; // Gezici liste başına alınır.
 
     Dugum *onceki;
@@ -117,10 +120,12 @@ void BagilListe::temizle() {
 //    Liste sonuna kadar tüm düğümler gezici ile gezilir ve tüm düğümler sırayla silinir.
     for (int i = 0; i < _boyut; i++) {
         onceki = _gezici->dugum(); // Gezicinin o an gösterdiği düğüm göstericide yedeklenir.
-        if (i < _boyut - 1) (*_gezici)++; // Gezicinin gösterdiği düğüm bir ilerletilir.
+        (*_gezici)++; // Gezicinin gösterdiği düğüm bir ilerletilir.
         delete onceki; // Gezicinin gösterdiği düğümün bir öncesindeki düğüm silinir.
-        _boyut--;
     }
+
+    _ilk = _son = NULL;
+    _boyut = 0;
 }
 
 BagilListe::~BagilListe() {

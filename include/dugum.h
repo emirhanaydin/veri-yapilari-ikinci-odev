@@ -11,17 +11,17 @@ public:
     Dugum();
 
     /**
-     * @param rakam Tutulacak olan rakam karakteri.
+     * @param karakter Tutulacak olan rakam karakteri.
      * @return Bu düğümden sonra gelen düğümün adresi.
      */
-    Dugum(char rakam, Dugum * = NULL);
+    Dugum(char karakter, Dugum * = NULL);
 
     /**
      * Uygulanan karakteri kendi rakam değeri olarak kopyalar.
-     * @param rakam Atanacak olan karakter değeri.
+     * @param karakter Atanacak olan karakter değeri.
      * @return Tutulan rakam karakteri değiştirildikten sonra kendini döndürür.
      */
-    Dugum &operator=(char rakam);
+    Dugum &operator=(char karakter);
 
     /**
      * Stream extraction operator (akış çıkarma operatörü) mevcut düğümün sonraki
@@ -30,12 +30,6 @@ public:
      * @return Mevcut düğümün adresini döndürür.
      */
     Dugum *operator>>(Dugum *dugum);
-
-    /**
-     * Gönderilen karakterin sayısal değerinin bir rakam olup olmadığını denetler.
-     * @return Rakam ise true, değil ise false döndürür.
-     */
-    bool rakamiDenetle(char &) const;
 
     char rakam() const;
 

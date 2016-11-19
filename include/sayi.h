@@ -20,11 +20,21 @@ public:
 
     friend Sayi operator+(const Sayi &, const Sayi &);
 
+    enum Bicim {
+        ardisik,
+        liste,
+        noktali
+    };
+
     int boyut() const;
 
     char getir(int) const;
 
+    void sayiGir();
+
     void ekle(char rakam, int indeks = -1);
+
+    void yazdir(Bicim bicim = ardisik);
 
     void rakamSil();
 

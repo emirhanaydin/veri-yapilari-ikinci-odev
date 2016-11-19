@@ -69,6 +69,8 @@ void Islem::ayrikYazdir(Sayi &sayi) {
                 std::cout << '-';
         }
     }
+
+//    TODO return sonuc;
 }
 
 void Islem::noktaliYazdir(Sayi &sayi) {
@@ -84,4 +86,6 @@ void Islem::noktaliYazdir(Sayi &sayi) {
             noktaSayaci = 0;
         }
     }
+
+//    TODO return sonuc;
 }
