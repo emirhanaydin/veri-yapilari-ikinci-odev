@@ -21,15 +21,12 @@ int main() {
         system("CLS");
         cout << "Toplamlari hesaplanacak olan uzunlugu sinirlandirilmamis iki sayi giriniz." << endl << endl;
 
-//        Konsol::imleciGoster();
-
-        sayi1->temizle();
+        sayi1->temizle(); // Temizle metodu boyut 1'den küçükse işlevsizdir, kontrol yapılması gerekmez.
         Konsol::renkliYazdir("1. sayi : ", 14);
         sayi1->sayiGir();
 
         sayi2->temizle();
         Konsol::renkliYazdir("2. sayi : ", 11);
-//        cout << "2. sayi : ";
         sayi2->sayiGir();
 
         cout << endl;
@@ -57,12 +54,10 @@ int main() {
 
         cout << endl << endl;
         cout << "Yeni bir toplama islemi yapmak istiyor musunuz?" << endl << endl << endl;
-//        Konsol::imleciGoster(false);
     } while (Secim::onayMenusu());
 
     delete sayi1;
     delete sayi2;
 
-//    Konsol::imleciGoster();
     return 0;
 }

@@ -21,7 +21,7 @@ public:
      * Konsol genişliğinin kaç karakter boyutunda olduğunu belirler.
      * @return Karakter sayısını döndürür.
      */
-    static int alKonsolGenisligi();
+    static short alKonsolGenisligi();
 
     /**
      * İmleci konsol penceresinde gösterilmesini veya gizlenmesini sağlar.
@@ -36,11 +36,11 @@ public:
      * @param x İmlecin yataydaki konumu.
      * @param y İmlecin dikeydeki konumu.
      */
-    static void imleciTasi(int x, int y);
+    static void imleciTasi(short x, short y);
 
-    static int alImlecX();
+    static short alImlecX();
 
-    static int alImlecY();
+    static short alImlecY();
 
     static bool alYaziRengi(short &renk);
 
@@ -61,12 +61,13 @@ public:
     /**
      * İmlecin şu anki yatay pozisyonundan satır sonuna kadar aynı karakteri basar.
      * @param karakter Basılacak olan karakter.
-     * @param x Başlangıçtaki yatay konum. Eğer verilmezse o anki konumdan başlar.
-     * @param y Gidilecek olan dikey konum. Eğer verilmezse o anki konum kabul edilir.
-     * @param geriyeDon Satır doldurulduktan sonra tekrar başlangıç pozisyonuna dönülsün mü?
-     * @param uzunluk Kaç adet karakter basılacağını belirtir. Varsayılan değerinde bırakılırsa satır sonuna kadar basılır.
+     * @param x [OPSİYONEL] Başlangıçtaki yatay konum. Eğer verilmezse o anki konumdan başlar.
+     * @param y [OPSİYONEL] Gidilecek olan dikey konum. Eğer verilmezse o anki konum kabul edilir.
+     * @param geriyeDon [OPSİYONEL] Satır doldurulduktan sonra tekrar başlangıç pozisyonuna dönülsün mü?
+     * @param uzunluk [OPSİYONEL] Kaç adet karakter basılacağını belirtir. Varsayılan değerinde bırakılırsa satır sonuna
+     * kadar basılır.
      */
-    static void satiriDoldur(char karakter, int x = -1, int y = -1, bool geriyeDon = true, int uzunluk = -1);
+    static void satiriDoldur(char karakter, short x = -1, short y = -1, bool geriyeDon = true, short uzunluk = -1);
 
     /**
      * Mevcut konumdan başlayarak sola doğru karakter siler.

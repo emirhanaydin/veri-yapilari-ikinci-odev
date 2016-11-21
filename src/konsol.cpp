@@ -13,7 +13,7 @@
 
 HANDLE Konsol::konsol = GetStdHandle(STD_OUTPUT_HANDLE);
 
-int Konsol::alKonsolGenisligi() {
+short Konsol::alKonsolGenisligi() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
 
     if (!GetConsoleScreenBufferInfo(konsol, &csbi)) {
@@ -35,30 +35,33 @@ void Konsol::imleciGoster(bool gorunur) {
 bool Konsol::imlecGorunurMu() {
     CONSOLE_CURSOR_INFO cci;
     GetConsoleCursorInfo(konsol, &cci);
+
     return (const bool) cci.bVisible;
 }
 
-void Konsol::imleciTasi(int x, int y) {
-    int konumX = x < 0 ? Konsol::alImlecX() : x;
-    int konumY = y < 0 ? Konsol::alImlecY() : y;
+void Konsol::imleciTasi(short x, short y) {
+    short konumX = x < 0 ? Konsol::alImlecX() : x;
+    short konumY = y < 0 ? Konsol::alImlecY() : y;
 
     COORD coord;
-    coord.X = (short) konumX;
-    coord.Y = (short) konumY;
+    coord.X = konumX;
+    coord.Y = konumY;
     SetConsoleCursorPosition(konsol, coord);
 }
 
-int Konsol::alImlecX() {
+short Konsol::alImlecX() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     if (!GetConsoleScreenBufferInfo(konsol, &csbi))
         return -1;
+
     return csbi.dwCursorPosition.X;
 }
 
-int Konsol::alImlecY() {
+short Konsol::alImlecY() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     if (!GetConsoleScreenBufferInfo(konsol, &csbi))
         return -1;
+
     return csbi.dwCursorPosition.Y;
 }
 
@@ -78,18 +81,26 @@ void Konsol::yaziRengi(int renk) {
 void Konsol::renkliYazdir(const char *yazi, int renk) {
     short mevcutRenk;
     Konsol::alYaziRengi(mevcutRenk);
-    Konsol::yaziRengi(renk);
+    bool renkFarkliMi = mevcutRenk != renk;
+
+    if (renkFarkliMi)
+        Konsol::yaziRengi(renk);
+
     std::cout << yazi;
-    Konsol::yaziRengi(mevcutRenk);
+
+    if (renkFarkliMi)
+        Konsol::yaziRengi(mevcutRenk);
 }
 
-void Konsol::satiriDoldur(char karakter, int x, int y, bool geriyeDon, int uzunluk) {
-    int konumX = x < 0 ? Konsol::alImlecX() : x;
-    int konumY = y < 0 ? Konsol::alImlecY() : y;
+void Konsol::satiriDoldur(char karakter, short x, short y, bool geriyeDon, short uzunluk) {
+    short konumX = x < 0 ? Konsol::alImlecX() : x; // Yatay konum değeri verilmemişse şu anki konum kabul edilir.
+    short konumY = y < 0 ? Konsol::alImlecY() : y; // Dikey konum değeri verilmemişse şu anki konum kabul edilir.
 
-    Konsol::imleciTasi(konumX, konumY);
+    if (x >= 0 || y >= 0) // Eğer x veya y değeri parametre olarak verilmişse imleç taşınır.
+        Konsol::imleciTasi(konumX, konumY); // İmleç alınan konuma taşınır.
 
-    int karAdedi = Konsol::alKonsolGenisligi() - konumX;
+    int karAdedi = Konsol::alKonsolGenisligi() - konumX; // Kaç adet karakter basılacağı hesaplanır.
+//    Eğer geçerli bir uzunluk değeri verilmişse basılacak olan karakter adedi olarak alınır.
     if (uzunluk >= 0 && uzunluk < karAdedi)
         karAdedi = uzunluk;
     for (int i = 0; i < karAdedi; i++)

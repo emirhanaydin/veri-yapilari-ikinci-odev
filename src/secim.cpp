@@ -9,24 +9,24 @@
 
 #include "secim.h"
 
-int Secim::yonTuslariSecimi(int secenek, int secenekSayisi, char geriye, char ileriye, char onay) {
-    int fark = 0;
+short Secim::yonTuslariSecimi(int secenek, int secenekSayisi, char geriye, char ileriye, char onay) {
+    short fark = 0;
     char secim = (char) _getch();
 
-    if (secim == geriye) { // Yukarı ok tuşu
+    if (secim == geriye) {
         if (secenek > 0)
             fark = -1;
-    } else if (secim == ileriye) { // Aşağı ok tuşu
+    } else if (secim == ileriye) {
         if (secenek < secenekSayisi - 1)
             fark = 1;
-    } else if (secim == onay) // CR karakteri, Enter tuşunu yakalamak için.
+    } else if (secim == onay)
         fark = 2;
 
     return fark;
 }
 
-void Secim::dikeySecim(std::string *secenekler, int secenekSayisi, int &secenek) {
-    int imlecY = Konsol::alImlecY() - (secenekSayisi - secenek - 1);
+void Secim::dikeySecim(std::string *secenekler, short secenekSayisi, int &secenek) {
+    short imlecY = Konsol::alImlecY() - (short) (secenekSayisi - secenek - 1);
     int fark = 0;
     secenek = 0;
 
@@ -44,8 +44,8 @@ void Secim::dikeySecim(std::string *secenekler, int secenekSayisi, int &secenek)
     Konsol::imleciTasi(0, imlecY);
     do { // Seçim döngüsü
         fark = yonTuslariSecimi(secenek, secenekSayisi);
-        if (fark == 2) break;
-        if (fark == 0) continue;
+        if (fark == 2) break; // Onay karakteri basılmışsa döngü sonlandırılır.
+        if (fark == 0) continue; // Eğer sınırlara ulaşılmış ve fark 0'a eşit olmuşsa döngü adımı sonlandırılır.
         secenek += fark;
 
 //        İmleci bir önceki seçeneğin başına taşır, satırı boş karakter ile doldurur ve tekrar satır başına alır.
@@ -69,10 +69,15 @@ void Secim::dikeySecim(std::string *secenekler, int secenekSayisi, int &secenek)
 
 bool Secim::onayMenusu(bool imleciGizle) {
     bool imleciTersle = Konsol::imlecGorunurMu() == imleciGizle;
+
+//    Eğer imlecin mevcut görünürlük durumu ile parametre değeri eşleşmezse görünürlük durumu terslenir.
     if (imleciTersle) Konsol::imleciGoster(!imleciGizle);
     string secenekler[] = {"Evet", "Hayir"};
     int secenek = 0;
     dikeySecim(secenekler, 2, secenek);
+
+//    Eğer başlangıçta imlecin görünürlük durumu terslenmişse tekrar eski haline döndürülür.
     if (imleciTersle) Konsol::imleciGoster(imleciGizle);
+
     return secenek == 0;
 }

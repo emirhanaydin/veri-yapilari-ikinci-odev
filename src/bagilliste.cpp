@@ -17,6 +17,8 @@ BagilListe::BagilListe() {
 }
 
 Dugum *BagilListe::konumdaki(int indeks) const {
+//    TODO if (indeks >= boyut || indeks < 0) throw Exception();
+
     *_gezici >> _ilk;
 
     for (int i = 0; i < _boyut; i++) {
@@ -49,34 +51,41 @@ bool operator==(const BagilListe &liste, const BagilListe &liste1) {
 }
 
 char BagilListe::getir(int indeks) const {
-//    TODO if (indeks >= boyut || indeks < 0) throw Exception();
+//    TODO if (indeks >= _boyut || indeks < 0) throw Exception();
 
     if (indeks == _boyut - 1)
         return _son->rakam();
 
     Dugum *dugum = konumdaki(indeks);
-
 //    TODO if (dugum == NULL) throw Exception();
+
     return dugum->rakam();
 }
 
 void BagilListe::ekle(char rakam, int indeks) {
-//    TODO if (indeks >= _boyut) throw Exception();
+//    TODO if (indeks >= _boyut || indeks < 0) throw Exception();
 
-    if (_boyut == 0) { // Listenin ilk elemanını ekleme işlemi.
+//    Listenin ilk elemanını ekleme işlemi.
+    if (_boyut == 0) {
         _ilk = new Dugum(rakam);
         _son = _ilk;
         if (_gezici == NULL)
             _gezici = new Gezici(_ilk);
         else
             *_gezici >> _ilk;
-    } else if (indeks == 0) { // Liste başına eleman ekleme işlemi.
+
+//    Liste başına eleman ekleme işlemi.
+    } else if (indeks == 0) {
         _ilk = new Dugum(rakam, _ilk);
-    } else if (indeks == _boyut - 1 || indeks < 0) { // Liste sonuna eleman ekleme işlemi.
+
+//    Liste sonuna eleman ekleme işlemi.
+    } else if (indeks == _boyut - 1 || indeks < 0) {
         Dugum *onceki = _son;
         _son = new Dugum(rakam);
         *onceki >> _son;
-    } else { // Araya eleman ekleme işlemi.
+
+//    Listede araya eleman ekleme işlemi.
+    } else {
         Dugum *onceki = konumdaki(indeks - 1);
         Dugum *yeni = new Dugum(rakam);
         *yeni >> onceki->sonraki();
@@ -96,15 +105,22 @@ void BagilListe::sil(int indeks) {
 
     Dugum *silinecek;
 
-    if (indeks == 0) { // İlk elemanı silme işlemi
+//    İlk elemanı silme işlemi
+    if (indeks == 0) {
         silinecek = _ilk;
-        _ilk = silinecek->sonraki();
+        _ilk = _ilk->sonraki();
         *_gezici >> _ilk;
-    } else if (indeks == _boyut - 1) { // Son elemanı silme işlemi
+
+//    Son elemanı silme işlemi
+    } else if (indeks == _boyut - 1) {
         silinecek = _son;
-        _son = (*konumdaki(indeks - 1) >> NULL);
+        _son = (*konumdaki(indeks - 1) >> NULL); // Sondan bir önceki düğüm, sonraki düğüm olarak hiçbir düğümü
+//        göstermeyecek şekilde değiştirilir, yani sonraki değeri NULL yapılır. Sonrasında son düğüm göstericisi sondan
+//        bir önceki düğümü gösterir. Bu sayede son düğüm, sondan bir önceki olarak değiştirilmiş olunur.
         *_gezici >> _son;
-    } else { // Aradan eleman silme işlemi
+
+//    Aradan eleman silme işlemi
+    } else {
         Dugum *onceki = konumdaki(indeks - 1);
         silinecek = onceki->sonraki();
         *onceki >> silinecek->sonraki();
@@ -120,7 +136,8 @@ int BagilListe::boyut() const {
 }
 
 void BagilListe::temizle() {
-    if (_boyut < 1) return;
+    if (_boyut < 1)
+        return;
 
     *_gezici >> _ilk; // Gezici liste başına alınır.
 

@@ -1,6 +1,6 @@
 /**
 * @file gezici.h
-* @description İlişkiler düğümler arasında ileriye doğru taramayı kolaylaştırmak için kullanılır.
+* @description İlişkili düğümler arasında ileriye doğru taramayı kolaylaştırmak için kullanılır.
 * @course 2A
 * @assignment 2
 * @date 3.11.2016

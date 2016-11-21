@@ -39,11 +39,14 @@ int Sayi::boyut() const {
 }
 
 char Sayi::getir(int indeks) const {
+//    TODO if (indeks >= _boyut || indeks < 0) throw Exception();
+
     return _liste->getir(indeks);
 }
 
 void Sayi::sayiGir() {
-    Islem::sayiGir(*this);
+    Islem::sayiGir(*this); // Islem sınıfının, konsoldan alınan değerleri Sayi'nın listesine uygun biçimde aktaracak
+//    olan ilgili metot çağrılır.
 }
 
 void Sayi::ekle(char rakam, int indeks) {
@@ -66,13 +69,16 @@ void Sayi::yazdir(Sayi::Bicim bicim) {
 }
 
 void Sayi::rakamSil() {
-    if (_boyut <= 0) return; // TODO throw Exception();
+//    TODO if (_boyut <= 0) throw Exception();
 
     _liste->sil(); // En son eleman diziden silinir.
     _boyut--;
 }
 
 void Sayi::temizle() {
+    if (_boyut < 1)
+        return;
+
     _liste->temizle();
     _boyut = 0;
 }

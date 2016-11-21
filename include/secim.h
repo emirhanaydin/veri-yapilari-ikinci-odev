@@ -22,12 +22,15 @@ private:
      * Kullanıcı tarafından girilen tuşun karakter değerine göre seçime uygulanacak olan indeks farkını belirler.
      * @param secenek Mevcut indeksi belirtir. Sınır denetimi yapmak için kullanılır.
      * @param secenekSayisi Maksimum seçenek indeksini belirtir.  Sınır denetimi yapmak için kullanılır.
-     * @param geriye İndeksi bir birim azaltacak olan tuşun karakterini belirtir.
-     * @param ileriye İndeksi bir birim artıracak olan tuşun karkaterini belirtir.
-     * @param onay Seçimi sonlandıracak olan tuşun, yani onay tuşununun karakterini belirtir.
-     * @return Bir birim geriye için -1, ileriye için 1, onay için ise 2 değeri döndürülür.
+     * @param geriye [OPSİYONEL] İndeksi bir birim azaltacak olan tuşun karakterini belirtir. Varsayılan olarak aşağı ok
+     * tuşu kabul edilir.
+     * @param ileriye [OPSİYONEL] İndeksi bir birim artıracak olan tuşun karakterini belirtir. Varsayılan olarak yukarı
+     * ok tuşu kabul edilir.
+     * @param onay [OPSİYONEL] Seçimi sonlandıracak olan tuşun, yani onay tuşununun karakterini belirtir. Varsayılan
+     * olarak CR (Carriage Return) yani satır sonu karakterini kabul eder. Bu sayede ENTER tuşu yakalanmış olur.
+     * @return Bir birim geriye için -1, ileriye için 1, onay için ise 2 değerini döndürürür.
      */
-    static int yonTuslariSecimi(int secenek, int secenekSayisi, char geriye = 72, char ileriye = 80, char onay = 13);
+    static short yonTuslariSecimi(int secenek, int secenekSayisi, char geriye = 72, char ileriye = 80, char onay = 13);
 
 public:
     /**
@@ -36,7 +39,7 @@ public:
      * @param secenekSayisi Toplam seçenek sayısı.
      * @param secenek Seçilmiş olan seçeneği döndürmek için kullanılan referans.
      */
-    static void dikeySecim(std::string secenekler[], int secenekSayisi, int &secenek);
+    static void dikeySecim(std::string secenekler[], short secenekSayisi, int &secenek);
 
     /**
      * Ana menüde seçilmiş olan seçeneğin konumuna bağlı olarak kullanıcıya Evet - Hayır seçenekli onay menüsünü sunar.
